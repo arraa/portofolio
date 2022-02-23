@@ -6,8 +6,8 @@
 }
 body {
     font-family: "Poppins", sans-serif;
-    color: #ffff;
-    background-color: #1a374d6c;
+    color: #424642;
+    background-color: #f3f4ed;
     min-height: 350vh;
 }
 nav {
@@ -120,8 +120,6 @@ nav ul li a:hover {
     }
 }
 
-/* animation */
-
 /* hamburger */
 
 .toggle input:checked ~ span:nth-child(2) {
@@ -167,7 +165,7 @@ nav ul li a:hover {
 }
 #typing {
     width: 0ch;
-    color: white;
+    color: #424642;
     float: left;
     font-weight: bold;
     font-size: 40px;
@@ -176,11 +174,11 @@ nav ul li a:hover {
     animation: typing 5s steps(40) 1s forwards;
 }
 #typing span {
-    color: #fb8c00;
+    color: #c06014;
 }
 #line {
     float: left;
-    color: white;
+    color: #424642;
     font-weight: bold;
     font-size: 40px;
     opacity: 0;
@@ -228,13 +226,64 @@ nav ul li a:hover {
 }
 
 .sosmed {
+    display: inline-flex;
     margin-top: 1.25rem;
     opacity: 0;
     animation: fadeInLeft 3s 6s forwards;
 }
+.fab {
+    color: #333;
+    transform: scale(1);
+}
 
-.logoHero {
-    padding: 10px;
+.sosmed .icon {
+    margin: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.sosmed .icon span {
+    position: relative;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    display: block;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sosmed .icon span i {
+    font-size: 23px;
+    line-height: 50px;
+}
+
+.sosmed .spotify:hover span {
+    background: #1db954;
+}
+.sosmed .instagram:hover span {
+    background: #c13584;
+}
+.sosmed .github:hover span {
+    background: #333;
+}
+
+.sosmed .linkedin:hover span {
+    background: #0e76a8;
+}
+
+.github:hover span .fab,
+.spotify:hover span .fab,
+.instagram:hover span .fab,
+.linkedin:hover span .fab {
+    color: #fff;
 }
 
 @keyframes fadeInLeft {
@@ -274,14 +323,20 @@ nav ul li a:hover {
 /* about */
 
 .About {
-    height: 150vh;
+    height: 125vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+.container {
+    margin: 2rem 0;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: space-evenly;
+}
 .foto {
+    border-radius: 10px;
     position: relative;
     display: inline;
 }
@@ -300,26 +355,52 @@ nav ul li a:hover {
 .desc {
     margin-top: 20px;
     text-align: center;
-    width: 55%;
+    width: 40%;
+}
+.cv {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    color: navy;
+    font-weight: bolder;
+    letter-spacing: 1px;
 }
 
 .table {
-    width: 80%;
-    margin: 2rem 0;
+    margin: 2rem;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-around;
+}
+.education {
+    width: 50%;
+    /* margin: 2rem 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.softwere {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.judulTable {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 
 table {
     font-size: 15px;
     border-collapse: collapse;
     text-align: left;
-    background-color: #1a374d6c;
+    background-color: #424642;
+    color: #fff;
 }
 th {
-    background-color: #1a374d;
+    background-color: #c06114c2; /*gatau warnanyaa*/
     padding: 0.5rem 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -331,62 +412,53 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: #406882;
-}
-
-.tableLove {
-    width: 80%;
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.judulLove {
-    text-transform: uppercase;
+    background-color: #536162;
 }
 
 /* project */
-.atas {
+.projectContainer {
+    height: 210vh;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contentProject {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
-.bawah {
-    margin-top: 5rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.card {
-    border-radius: 10px;
-    padding: 18px;
-    box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 4px;
-    background-color: rgb(252, 252, 252);
-    height: 22rem;
-    width: 17rem;
-    color: #1a374d;
+.contentProject:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
-.box:hover .card {
-    filter: blur(2px);
-    opacity: 0.5;
-    transform: scale(0.98);
-    box-shadow: none;
+.fotoProject > img {
+    width: 30rem;
 }
 
-.box:hover .card:hover {
-    transform: scale(1);
-    filter: blur(0px);
-    opacity: 1;
-    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.125);
+.description {
+    width: 40%;
+}
+
+.tipe {
+    margin: 0.25rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #424642;
+}
+
+.penjelasan {
+    color: #424642e5;
+    margin: 1rem 0;
+    text-align: justify;
 }
 
 /* contact */
 
 .contact-us {
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -419,7 +491,7 @@ tr:nth-child(even) {
     width: 100%;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #424642;
     margin: 1rem 0;
 }
 
@@ -429,7 +501,7 @@ tr:nth-child(even) {
     height: 3rem;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #424642;
     margin-bottom: 10px;
 }
 
@@ -439,8 +511,8 @@ tr:nth-child(even) {
     margin: 2rem 0;
     padding: 8px 40px;
     background-color: transparent;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid #424642;
+    color: #424642;
     font-weight: 600;
     border-radius: 10px;
     letter-spacing: 2px;
@@ -449,6 +521,7 @@ tr:nth-child(even) {
 
 /* footer */
 .content {
+    margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -457,7 +530,7 @@ tr:nth-child(even) {
 .lineFooter {
     width: 60%;
     height: 3px;
-    background-color: #ffff;
+    background-color: #424642;
 }
 
 .footer {
@@ -466,4 +539,56 @@ tr:nth-child(even) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.sosmedFooter {
+    display: inline-flex;
+    opacity: 1;
+}
+.fab {
+    color: #333;
+    transform: scale(1);
+}
+
+.sosmedFooter .icon {
+    margin: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.sosmedFooter .icon span {
+    position: relative;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    display: block;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sosmedFooter .icon span i {
+    font-size: 23px;
+    line-height: 50px;
+}
+
+.sosmedFooter .spotify:hover span {
+    background: #1db954;
+}
+.sosmedFooter .instagram:hover span {
+    background: #c13584;
+}
+.sosmedFooter .github:hover span {
+    background: #333;
+}
+
+.sosmedFooter .linkedin:hover span {
+    background: #0e76a8;
 }
