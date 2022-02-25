@@ -4,12 +4,92 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 body {
     font-family: "Poppins", sans-serif;
     color: #424642;
     background-color: #f3f4ed;
     min-height: 350vh;
 }
+
+/* animasi */
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes lines {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        transform: translateX(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes UpDown {
+    0% {
+        opacity: 0.8;
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 15px);
+    }
+    100% {
+        opacity: 0.8;
+        transform: translate(0, -0px);
+    }
+}
+
+@keyframes slide {
+    20% {
+        margin-left: 0px;
+    }
+    40% {
+        margin-left: calc(-30rem * 1);
+    }
+    60% {
+        margin-left: calc(-30rem * 2);
+    }
+    80% {
+        margin-left: calc(-30rem * 3);
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+
+/* navbar */
 nav {
     overflow: hidden;
     position: fixed;
@@ -53,6 +133,7 @@ nav ul li a:hover {
     justify-content: space-between;
     height: 25px;
 }
+
 .toggle input {
     position: absolute;
     cursor: pointer;
@@ -63,6 +144,7 @@ nav ul li a:hover {
     left: -10px;
     top: -4px;
 }
+
 .toggle span {
     display: block;
     width: 28px;
@@ -116,6 +198,7 @@ nav ul li a:hover {
 .name {
     display: flex;
 }
+
 #typing {
     width: 0ch;
     color: #424642;
@@ -126,9 +209,11 @@ nav ul li a:hover {
     white-space: nowrap;
     animation: typing 5s steps(40) 1s forwards;
 }
+
 #typing span {
     color: #c06014;
 }
+
 #line {
     float: left;
     color: #424642;
@@ -136,28 +221,6 @@ nav ul li a:hover {
     font-size: 40px;
     opacity: 0;
     animation: lines 5s 1s;
-}
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-@keyframes lines {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
 }
 
 #Activist {
@@ -168,22 +231,13 @@ nav ul li a:hover {
     animation: fadeIn 3s 6s forwards;
 }
 
-@keyframes fadeIn {
-    0% {
-        transform: translateX(-80px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .sosmed {
     display: inline-flex;
     margin-top: 1.25rem;
     opacity: 0;
     animation: fadeInLeft 3s 6s forwards;
 }
+
 .fab {
     color: #333;
     transform: scale(1);
@@ -221,9 +275,11 @@ nav ul li a:hover {
 .sosmed .spotify:hover span {
     background: #1db954;
 }
+
 .sosmed .instagram:hover span {
     background: #c13584;
 }
+
 .sosmed .github:hover span {
     background: #333;
 }
@@ -239,16 +295,6 @@ nav ul li a:hover {
     color: #fff;
 }
 
-@keyframes fadeInLeft {
-    0% {
-        transform: translateX(80px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .arrow {
     display: flex;
     flex-direction: column;
@@ -257,20 +303,6 @@ nav ul li a:hover {
     height: 40vh;
     opacity: 0;
     animation: UpDown 4s 10s infinite;
-}
-
-@keyframes UpDown {
-    0% {
-        opacity: 0.8;
-        transform: translate(0, 0px);
-    }
-    50% {
-        transform: translate(0, 15px);
-    }
-    100% {
-        opacity: 0.8;
-        transform: translate(0, -0px);
-    }
 }
 
 /* about */
@@ -290,16 +322,19 @@ nav ul li a:hover {
     font-size: 25px;
     letter-spacing: 2px;
 }
+
 .container {
     margin: 2rem 0;
     display: flex;
     justify-content: space-evenly;
 }
+
 .foto {
     border-radius: 10px;
     position: relative;
     display: inline;
 }
+
 .foto .back {
     display: none;
     position: absolute;
@@ -317,6 +352,7 @@ nav ul li a:hover {
     text-align: center;
     width: 40%;
 }
+
 .cv {
     margin-top: 1rem;
     display: flex;
@@ -333,6 +369,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-around;
 }
+
 .education {
     width: 50%;
     /* margin: 2rem 0; */
@@ -340,6 +377,7 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
 }
+
 .softwere {
     width: 50%;
     display: flex;
@@ -360,6 +398,7 @@ table {
     background-color: #b8a587;
     color: #fff;
 }
+
 th {
     background-color: #81745f; /*gatau warnanyaa*/
     padding: 0.5rem 1.5rem;
@@ -380,18 +419,21 @@ tr:nth-child(even) {
 #project {
     min-height: 210vh;
 }
+
 .projectt {
     padding-top: 4.25rem;
     text-align: center;
     font-size: 25px;
     letter-spacing: 2px;
 }
+
 .projectContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .contentProject {
     margin: 1rem 0;
     display: flex;
@@ -428,25 +470,7 @@ tr:nth-child(even) {
 }
 
 .wrapper:hover {
-    animation: slide 7s ease infinite;
-}
-
-@keyframes slide {
-    20% {
-        margin-left: 0px;
-    }
-    40% {
-        margin-left: calc(-30rem * 1);
-    }
-    60% {
-        margin-left: calc(-30rem * 2);
-    }
-    80% {
-        margin-left: calc(-30rem * 3);
-    }
-    100% {
-        margin-left: 0px;
-    }
+    animation: slide 8s infinite;
 }
 
 .description {
@@ -454,16 +478,35 @@ tr:nth-child(even) {
 }
 
 .tipe {
+    font-weight: 500;
     margin: 0.25rem 0;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #424642;
+    color: #424642d5;
+}
+
+.judulProject {
+    letter-spacing: 2px;
+    font-size: 1.75rem;
 }
 
 .penjelasan {
+    font-weight: 500;
+    font-size: 19px;
     color: #424642e5;
     margin: 1rem 0;
     text-align: justify;
+}
+
+.details {
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.details:hover {
+    text-decoration: underline;
 }
 
 /* contact */
@@ -505,6 +548,7 @@ tr:nth-child(even) {
     border-bottom: 2px solid #424642;
     margin: 0.5rem 0;
 }
+
 .contact-me form .formInput:focus {
     outline: none;
     border-bottom: 2px solid #c06014;
@@ -542,6 +586,7 @@ tr:nth-child(even) {
     justify-content: center;
     align-items: center;
 }
+
 .lineFooter {
     width: 60%;
     height: 3px;
@@ -560,6 +605,7 @@ tr:nth-child(even) {
     display: inline-flex;
     opacity: 1;
 }
+
 .fab {
     color: #333;
     transform: scale(1);
@@ -597,9 +643,11 @@ tr:nth-child(even) {
 .sosmedFooter .spotify:hover span {
     background: #1db954;
 }
+
 .sosmedFooter .instagram:hover span {
     background: #c13584;
 }
+
 .sosmedFooter .github:hover span {
     background: #333;
 }
@@ -616,10 +664,12 @@ tr:nth-child(even) {
         font-size: 15px;
         padding: 1rem 2rem;
     }
+
     nav ul {
         width: 50%;
     }
-    /* herp */
+
+    /* hero */
     .svgAtas {
         height: 15rem;
     }
@@ -644,6 +694,7 @@ tr:nth-child(even) {
         flex-direction: column;
         align-items: center;
     }
+
     .softwere {
         margin-top: 2rem;
     }
@@ -703,12 +754,15 @@ tr:nth-child(even) {
         margin: 0;
         padding: 0;
     }
+
     .toggle {
         display: flex;
     }
+
     nav {
         padding: 1rem 1.5rem;
     }
+
     nav ul {
         position: fixed;
         top: -100%;
@@ -734,19 +788,23 @@ tr:nth-child(even) {
         top: 55px;
         left: 0;
     }
-    /* her0 */
+
+    /* hero */
     .svgAtas {
         width: 28rem;
         height: 13rem;
     }
+
     #typing {
         width: 0%;
         font-size: 30px;
         animation: typing 5s steps(40) 1s forwards;
     }
+
     #typing span {
         color: #c06014;
     }
+    
     #line {
         float: left;
         color: #424642;
