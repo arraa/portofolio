@@ -317,14 +317,13 @@ nav ul li a:hover {
 
 .judulAbout {
     padding-top: 2.25rem;
-    margin-bottom: 20px;
     text-align: center;
     font-size: 25px;
     letter-spacing: 2px;
 }
 
 .container {
-    margin: 2rem 0;
+    margin: 1.75rem 0;
     display: flex;
     justify-content: space-evenly;
 }
@@ -371,7 +370,7 @@ nav ul li a:hover {
 }
 
 .education {
-    width: 50%;
+    width: 38rem;
     /* margin: 2rem 0; */
     display: flex;
     flex-direction: column;
@@ -379,10 +378,13 @@ nav ul li a:hover {
 }
 
 .softwere {
-    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.softwere table {
+    width: 30rem;
 }
 
 .judulTable {
@@ -392,7 +394,7 @@ nav ul li a:hover {
 }
 
 table {
-    font-size: 15px;
+    font-size: 14px;
     border-collapse: collapse;
     text-align: left;
     background-color: #b8a587;
@@ -400,15 +402,15 @@ table {
 }
 
 th {
-    background-color: #81745f; /*gatau warnanyaa*/
-    padding: 0.5rem 1.5rem;
+    background-color: #81745f;
+    padding: 0.5rem 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 900;
 }
 
 td {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
 }
 
 tr:nth-child(even) {
@@ -470,7 +472,7 @@ tr:nth-child(even) {
 }
 
 .wrapper:hover {
-    animation: slide 8s infinite;
+    animation: slide 12s ease infinite;
 }
 
 .description {
@@ -719,11 +721,11 @@ tr:nth-child(even) {
     .description {
         width: 65%;
     }
-
+    /* contact */
     .contact-me form {
         width: 70%;
     }
-
+    /* footer */
     .sosmedFooter .icon {
         margin: 0 8px;
     }
@@ -750,11 +752,6 @@ tr:nth-child(even) {
 /* mobile */
 
 @media screen and (max-width: 576px) {
-    html {
-        margin: 0;
-        padding: 0;
-    }
-
     .toggle {
         display: flex;
     }
@@ -804,7 +801,7 @@ tr:nth-child(even) {
     #typing span {
         color: #c06014;
     }
-    
+
     #line {
         float: left;
         color: #424642;
@@ -817,7 +814,113 @@ tr:nth-child(even) {
     #Activist {
         margin-top: 1rem;
         font-size: 18px;
-        opacity: 1;
-        /* animation: fadeIn 3s 6s forwards; */
+        opacity: 0;
+        animation: fadeIn 3s 6s forwards;
+    }
+
+    .arrow {
+        height: 50vh;
+    }
+    /* about */
+
+    .desc h2 {
+        font-size: 1.25rem;
+    }
+
+    .desc p {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .education {
+        width: 20rem;
+    }
+
+    .judulTable {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th {
+        padding: 0.5rem 1rem;
+    }
+
+    td {
+        padding: 0.5rem 1rem;
+    }
+
+    .softwere table {
+        width: 21rem;
+    }
+
+    /* project */
+    .contentSlide > img {
+        width: 20rem;
+    }
+
+    .contentProject {
+        margin: 0.75rem 0;
+    }
+
+    .contentSlide {
+        height: 20rem;
+        width: 30rem;
+    }
+    .tipe {
+        font-size: 14px;
+    }
+
+    .judulProject {
+        font-size: 1.5rem;
+    }
+
+    .penjelasan {
+        font-size: 16px;
+    }
+
+    .details {
+        font-size: 15px;
+    }
+
+    .fotoProject {
+        overflow: hidden;
+        height: 20rem;
+        width: 30rem;
+    }
+
+    /* footer */
+    .bywith h4 {
+        font-size: 0.75rem;
+    }
+
+    .sosmedFooter {
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sosmedFooter .icon {
+        margin: 5px 5px;
+    }
+
+    .sosmedFooter .icon span {
+        height: 30px;
+        width: 30px;
+    }
+
+    .sosmedFooter .icon span i {
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .lineFooter {
+        width: 100%;
+    }
+
+    .footer {
+        width: 90%;
     }
 }
